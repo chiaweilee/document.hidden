@@ -1,4 +1,7 @@
 # document.hidden
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/chiaweilee/document.hidden.svg)](https://greenkeeper.io/)
+
 Listen document hidden &amp; shown
 
 # Install
