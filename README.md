@@ -16,10 +16,10 @@ import hidden from 'document.hidden'
 hidden({
   delay: 3000,
   hidden () {
-    console.log('hidden called more than 300 0ms')
+    console.log('hidden called, when hidden more than 300 0ms')
   },
   shown () {
-    console.log('shown called after hidden more than 3000 ms')
+    console.log('shown called, only when hidden more than 3000 ms')
     // ⚠ if hidden less than 3000ms and shown next, shown() will not been called.
   }
 })
