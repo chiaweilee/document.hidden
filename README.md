@@ -20,17 +20,3 @@ hidden({
   }
 })
 ```
-
-# Example
-```js
-import hidden from 'document.hidden'
-hidden({
-  delay: 10000,
-  hidden () {
-    WS.close() // close websocket connection if document hidden
-  },
-  shown () {
-    WS.connect()
-  }
-})
-```

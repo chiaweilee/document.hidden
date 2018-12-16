@@ -1,25 +1,32 @@
 {
   "name": "document.hidden",
-  "version": "0.0.2",
-  "description": "Listen document hidden & shown",
-  "main": "lib/index.js",
-  "directories": {
-    "lib": "lib"
-  },
+  "version": "0.1.1",
+  "private": false,
+  "sideEffects": false,
+  "main": "./lib/index.js",
+  "module": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint --ext .js src --fix",
+    "es5": "npx babel --no-babelrc src --out-dir lib",
+    "commit": "npx git-cz"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chiaweilee/document.hidden.git"
+  "gitHooks": {
+    "pre-commit": "lint-staged",
+    "commit-msg": "node scripts/verify-commit-msg.js"
   },
-  "keywords": [
-    "document.hidden"
-  ],
+  "lint-staged": {
+    "*.js": [
+      "npm run lint",
+      "git add"
+    ]
+  },
   "author": "+v",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/chiaweilee/document.hidden/issues"
-  },
-  "homepage": "https://github.com/chiaweilee/document.hidden#readme"
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.5",
+    "eslint": "^5.10.0",
+    "lint-staged": "^7.3.0"
+  }
 }
