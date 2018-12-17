@@ -9,7 +9,7 @@ export default function (opt) {
 
   document.addEventListener('visibilitychange', function () {
     const isHidden = document.hidden
-    const {delay, hidden, shown} = opts
+    const { delay, hidden, shown } = opts
 
     if (isHidden === true) {
       if (delay > 0) {
